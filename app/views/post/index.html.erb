@@ -1,13 +1,13 @@
-<form>
+<form action="/post/create" method="post">
     <input type = "text" name = "usertitle"> 
     <input type = "text" name = "usercontent">
     <input type = "submit" value = "제출">
 </form>
 <br><hr>
 
-<% @post.each do |x| %>
-    제목 : <%=x.title%><br>
-    내용 : <%=x.content%><br><hr>
+<% @posts.each do |x| %>
+    제목 : <%= x.title %><br>
+    내용 : <%= x.content %><br><hr>
 <%end%>
 
     

@@ -1,16 +1,14 @@
 class PostController < ApplicationController
-    def home
-        @post = Post.new
-    end
+
     
     def index
-        @post = Post.all
+        @posts = Post.all
     end
     
     def create
         @post = Post.new
-        @post.title = params[:name_info]
-        @post.content = params[:price_info]
+        @post.title = params[:usertitle]
+        @post.content = params[:usercontent]
         @post.save
         redirect_to "/"
     end
