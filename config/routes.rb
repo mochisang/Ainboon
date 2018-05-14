@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  
+  root "post#home"
+  
+  post '/post/create' => 'post#create', as: 'post_create'
+  
+    get '/post/index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
