@@ -4,13 +4,14 @@ class PostController < ApplicationController
     end
     
     def index
+        @post = Post.all
     end
     
     def create
         @post = Post.new
         @post.title = params[:name_info]
         @post.content = params[:price_info]
-        
+        @post.save
         redirect_to "/"
     end
     
